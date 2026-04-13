@@ -11,6 +11,10 @@ export default function Navbar(){
                 <Link href="/">HOME</Link>
                 <Link href="/posts">POSTS</Link>
                 <Link href="/contact">CONTACT</Link>
+                <select name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
             </div>
         </nav>
     )
