@@ -28,10 +28,10 @@ export default function ContactForm(){
     return(
         <main>
             <form className="contact-form" onSubmit = {handleSubmit}>
-                <h2>Contact Us</h2>
+                <h2 className="text">Contact Us</h2>
 
                 <div className="form-row">
-                    <label>Name:</label>
+                    <label className="text">Name:</label>
                     <input id="name" type="text" 
                     value = {name}
                     onChange = {(e) => setName(e.target.value)}
@@ -40,7 +40,7 @@ export default function ContactForm(){
                 </div>
 
                 <div className="form-row">
-                    <label>Email:</label>
+                    <label className="text">Email:</label>
                     <input id="email" type="email" 
                     value = {email}
                     onChange = {(e) => setEmail(e.target.value)}
@@ -50,7 +50,7 @@ export default function ContactForm(){
                 </div>
 
                 <div className="form-row">
-                    <label>Message:</label>
+                    <label className="text">Message:</label>
                     <textarea id="message" rows="5" 
                     value = {message}
                     onChange = {(e) => setMessage(e.target.value)}

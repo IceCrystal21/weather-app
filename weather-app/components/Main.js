@@ -31,7 +31,7 @@ export default function Main(){
 
     return(
         <main>
-            <h3>Search for a city..</h3>
+            <h3 className="text">Search for a city..</h3>
             <input
                 type="text"
                 value = {city}

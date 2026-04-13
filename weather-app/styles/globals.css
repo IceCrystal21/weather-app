@@ -1,3 +1,10 @@
+:root {
+  --main_bg:#d5f0ff;
+  --nav_bg:#ffffff;
+  --text_col:#000000;
+  --contact_bg: #ffffff;
+}
+
 body{
   margin: 0;
 }
@@ -6,8 +13,8 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #d5f0ff /*#b1ccd8;*/
-}
+  background: var(--main_bg) /*#b1ccd8;*/
+} 
 
 main{
   display: flex;
@@ -20,7 +27,7 @@ main{
 /* NAVBAR */
 nav {
   padding: 15px ;
-  background: #ffffff;/* #fffdeb; */
+  background: var(--nav_bg);/* #fffdeb; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -28,7 +35,7 @@ nav {
 }
 
 nav a{
-  color: rgb(0, 0, 0);
+  color: var(--text_col);
   font-size: 20px;
   margin-right: 45px;
   text-decoration: none;
@@ -74,12 +81,16 @@ nav a:hover{
 }
 
 /* CONTACT FORM */
+.text{
+  color: var(--text_col);
+}
+
 .contact-form{
   max-width: 500px;
   width: 100%;
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  background-color:  #ffffff;
+  background-color:  var(--contact_bg);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -98,7 +109,7 @@ nav a:hover{
 
 .submit-button{
   background-color: #144b69;
-  color: #ffffff;
+  color: var(--nav-bg);
   font-size: 14px;
   padding: 5px;
   width: 180px;
@@ -124,7 +135,7 @@ footer {
   margin-top: 50px;
   padding: 20px;
   text-align: center;
-  background: #d5f0ff;
+  background: var(--nav-bg);
   margin-top: auto;
 }
 
