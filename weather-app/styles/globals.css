@@ -13,7 +13,7 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #d5f0ff;
+  background: var(--main_bg);
 }
 
 main{
@@ -37,7 +37,7 @@ nav {
   margin: 0 auto;
   margin-bottom: 20px; 
   margin-top: 15px;
-  background: rgb(255, 255, 255);
+  background: var(--nav_bg);
   padding: 15px ;
   border-radius: 40px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
@@ -73,7 +73,7 @@ nav a:hover{
   width: 100%;
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  background-color:  #ffffff;
+  background-color:  var(--contact_bg);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ nav a:hover{
 
 .card{
   display: block;
-  background: #ffffff;
+  background: var(--contact_bg);
   padding: 20px;
   border-radius: 15px;
   text-decoration: none;
@@ -158,7 +158,7 @@ nav a:hover{
 
 .submit-button{
   background-color: #144b69;
-  color: var(--nav_bg);
+  color: #ffffff;
   font-size: 14px;
   padding: 5px;
   width: 180px;
@@ -177,7 +177,7 @@ footer {
   margin-top: 50px;
   padding: 20px;
   text-align: center;
-  background: var(--nav-bg);
+  background: var(--nav_bg);
   margin-top: auto;
 }
 

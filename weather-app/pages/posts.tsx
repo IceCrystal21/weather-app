@@ -29,7 +29,7 @@ export default function Posts(){
         <div className="layout">
             <Navbar />
             <main>
-                <h1>Articles</h1>
+                <h1 className="text">Articles</h1>
                 <div className="posts-container">
                     {posts.map(post => (
                     <a
@@ -40,8 +40,8 @@ export default function Posts(){
                         className="card"
                     >
                     <img src={post.image} alt={post.title}/>
-                    <h2>{post.title}</h2>
-                    <p>{post.description}</p>
+                    <h2 className="text">{post.title}</h2>
+                    <p className="text">{post.description}</p>
                     </a>
                     ))}
                 </div>
