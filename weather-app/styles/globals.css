@@ -13,13 +13,8 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-<<<<<<< Updated upstream
-  background: var(--main_bg) /*#b1ccd8;*/
-} 
-=======
-  background: #d5f0ff
+  background: #d5f0ff;
 }
->>>>>>> Stashed changes
 
 main{
   display: flex;
@@ -33,11 +28,7 @@ main{
 nav {
   /*
   padding: 15px ;
-<<<<<<< Updated upstream
-  background: var(--nav_bg);/* #fffdeb; */
-=======
   background: #ffffff;
->>>>>>> Stashed changes
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -163,7 +154,7 @@ nav a:hover{
 
 .submit-button{
   background-color: #144b69;
-  color: var(--nav-bg);
+  color: var(--nav_bg);
   font-size: 14px;
   padding: 5px;
   width: 180px;
