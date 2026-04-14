@@ -13,43 +13,67 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+<<<<<<< Updated upstream
   background: var(--main_bg) /*#b1ccd8;*/
 } 
+=======
+  background: #d5f0ff
+}
+>>>>>>> Stashed changes
 
 main{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* NAVBAR */
 nav {
+  /*
   padding: 15px ;
+<<<<<<< Updated upstream
   background: var(--nav_bg);/* #fffdeb; */
+=======
+  background: #ffffff;
+>>>>>>> Stashed changes
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
+  */
+  margin: 0 auto;
+  margin-bottom: 20px; 
+  margin-top: 15px;
+  background: rgb(255, 255, 255);
+  padding: 15px ;
+  border-radius: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  width: 90%;
+  
 }
 
 nav a{
   color: var(--text_col);
   font-size: 20px;
+  font-weight: bold;
   margin-right: 45px;
   text-decoration: none;
 }
 
 nav a:hover{
-  color: rgb(190, 108, 53);
+  color: rgb(214, 135, 82);
 }
 
 .logo img{
   display: flex;
   align-items: center;
+  padding-left: 20px;
   padding-right: 35px;
-  height: 42px;
+  height: 38px;
 }
 
 /* WEATHER */
@@ -65,7 +89,7 @@ nav a:hover{
   align-items: center;
 }
 
-.search-button{
+.search-button, .temp-toggle{
   background-color: #144b69;
   color: #ffffff;
   font-size: 14px;
@@ -75,10 +99,40 @@ nav a:hover{
   margin-top: 20px;
 }
 
-.search-button:hover{
+.search-button:hover, .temp-toggle:hover{
   background-color: white;
   color: #144b69;
 }
+
+/* POSTS/ARTICLES */
+.posts-container{
+  display: grid;
+  width: 95%;
+  max-width: 1200px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+}
+
+.card{
+  display: block;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.posts-container img{
+  height: 280px;
+  display: block;
+  margin: 0 auto;
+}
+
+.card:hover{
+  
+}
+
 
 /* CONTACT FORM */
 .text{
@@ -86,7 +140,7 @@ nav a:hover{
 }
 
 .contact-form{
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -121,13 +175,6 @@ nav a:hover{
   color: #144b69;
 }
 
-/* POSTS */
-.posts-container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-}
-
 /* FOOTER */
 footer {
   color: #000000;
@@ -149,11 +196,13 @@ footer p {
   nav a{
     font-size: 18px;
     margin-right: 9px;
-   
+    justify-content: center;
   }
   .logo img{
-    height: 38px;
+    height: 34px;
+    width: 65px;
     padding-right: 10px;
+    padding-left: 10px;
   }
   .search-container{
     max-width: fit-content;
@@ -166,6 +215,11 @@ footer p {
   .posts-container{
     grid-template-columns: 1fr;
   }
+  .posts-container img{
+    max-width: 290px;
+    height: auto;
+  }
+
 
   footer{
     font-size: 14px;
