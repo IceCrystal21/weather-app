@@ -31,23 +31,24 @@ export default function Main(){
 
     return(
         <main>
-            <h3 className="text">Search for a city..</h3>
-            <input
-                type="text"
-                value = {city}
-                onChange = {(e) => setCity(e.target.value)}
-            />
-            <button onClick = {getWeather}>Search</button>
-            {error && <p className="error">{error}</p>}
-            {weatherData && (
-                <div className="weather-info">
-                    <h2>{weatherData.location.name}, {weatherData.location.country}</h2>
-                    <p>Temperature: {toggleUnit()}°{celcius ? "F" : "C"}</p>
-                    <p>Condition: {weatherData.current.weather_descriptions[0]}</p>
-                </div>
-            )}
-            <button onClick={() => setCelsius(!celcius)}>Toggle °C/°F</button>
-
+            <div className="search-container">
+                <h3 className="text">Search for a city..</h3>
+                <input
+                    type="text"
+                    value = {city}
+                    onChange = {(e) => setCity(e.target.value)}
+                />
+                <button className="search-button" onClick = {getWeather}>Search</button>
+                {error && <p className="error">{error}</p>}
+                {weatherData && (
+                    <div className="weather-info">
+                        <h2>{weatherData.location.name}, {weatherData.location.country}</h2>
+                        <p>Temperature: {toggleUnit()}°{celcius ? "F" : "C"}</p>
+                        <p>Condition: {weatherData.current.weather_descriptions[0]}</p>
+                    </div>
+                )}
+                <button className="temp-toggle" onClick={() => setCelsius(!celcius)}>Toggle °C/°F</button>
+            </div>
         </main>
     )
 }

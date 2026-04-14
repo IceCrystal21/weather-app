@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 
 export default function ThemeSwitcher() {
     const [theme, Settheme] = useState("Light")
-    var sun = "/sun.png"
-    var moon = "/moon.png"
+    var sun = "/darkmode.png"
+    var moon = "/darkmode.png"
     
 
     useEffect(() => {
