@@ -12,7 +12,7 @@ export default function Navbar(){
                 <Link href="/posts">POSTS</Link>
                 <Link href="/contact">CONTACT</Link>
             </div>
-            <div>
+            <div className="theme-toggle">
                 <ThemeSwitcher></ThemeSwitcher>
             </div>
         </nav>

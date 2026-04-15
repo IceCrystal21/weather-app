@@ -59,9 +59,14 @@ nav a:hover{
   height: 38px;
 }
 
+.theme-toggle{
+  margin-left: auto;
+}
+
+
+
 /* WEATHER */
 .search-container{
- 
   max-width: 500px;
   width: 100%;
   border-radius: 30px;
