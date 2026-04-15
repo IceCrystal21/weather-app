@@ -2,13 +2,21 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function ThemeSwitcher() {
-    const [theme, Settheme] = useState("Light")
+    const [theme, Settheme] = useState(() => {
+        try {
+           var item = localStorage.getItem("theme")
+        } catch {
+            var item = 0
+        }
+        return item
+    })
     var sun = "/darkmode.png"
     var moon = "/lightmode.png"
     
 
     useEffect(() => {
         var css_var = document.documentElement
+        localStorage.setItem("theme", theme)
         if (theme == "Light") {
                     css_var.style.setProperty("--main_bg", "#d5f0ff")
                     css_var.style.setProperty("--nav_bg", "#ffffff")
