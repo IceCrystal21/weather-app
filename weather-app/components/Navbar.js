@@ -11,6 +11,8 @@ export default function Navbar(){
                 <Link href="/">HOME</Link>
                 <Link href="/posts">POSTS</Link>
                 <Link href="/contact">CONTACT</Link>
+            </div>
+            <div>
                 <ThemeSwitcher></ThemeSwitcher>
             </div>
         </nav>

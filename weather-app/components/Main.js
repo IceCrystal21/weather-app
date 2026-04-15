@@ -6,7 +6,6 @@ export default function Main(){
     const [celcius, setCelsius] = useState(true);
     const [error, setError] = useState(null);
     
-    const API_KEY = "insert key here";
 
     const getWeather = async () => {
         if (!city) {
@@ -41,7 +40,7 @@ export default function Main(){
     return(
         <main>
             <div className="search-container">
-                <h3 className="text">Search for a city..</h3>
+                <h2 className="text">Search for a city:</h2>
                 <input
                     type="text"
                     value = {city}
@@ -51,12 +50,15 @@ export default function Main(){
                 {error && <p className="error">{error}</p>}
                 {weatherData && (
                     <div className="weather-info">
-                        <h2>{weatherData.city_name}</h2>
-                        <p>Temperature: {toggleUnit()}°{celcius ? "F" : "C"}</p>
-                        <p>Condition: {weatherData.weather.description}</p>
+                        <h2 className="text">{weatherData.city_name}</h2>
+                        <p className="text">Condition:</p>
+                        <h3 className="text">{weatherData.weather.description}</h3>
+                        <p className="text">Temperature:</p>
+                        <h3 className="text">{toggleUnit()}°{celcius ? "F" : "C"}</h3>
+                        <button className="temp-toggle" onClick={() => setCelsius(!celcius)}>Toggle °C/°F</button>
                     </div>
                 )}
-                <button className="temp-toggle" onClick={() => setCelsius(!celcius)}>Toggle °C/°F</button>
+                
             </div>
         </main>
     )

@@ -26,14 +26,6 @@ main{
 
 /* NAVBAR */
 nav {
-  /*
-  padding: 15px ;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px; 
-  */
   margin: 0 auto;
   margin-bottom: 20px; 
   margin-top: 15px;
@@ -69,6 +61,7 @@ nav a:hover{
 
 /* WEATHER */
 .search-container{
+ 
   max-width: 500px;
   width: 100%;
   border-radius: 30px;
@@ -94,6 +87,20 @@ nav a:hover{
   background-color: white;
   color: #144b69;
 }
+
+.weather-info{
+  text-align: center;
+}
+.weather-info p{
+  font-size: 20px;
+}
+.weather-info h2{
+  text-transform: uppercase;
+}
+.weather-info h3{
+  font-size: 25px;
+}
+
 
 /* POSTS/ARTICLES */
 .posts-container{
