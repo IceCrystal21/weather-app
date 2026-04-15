@@ -6,18 +6,23 @@ export default function Main(){
     const [celcius, setCelsius] = useState(true);
     const [error, setError] = useState(null);
     
-    const WEATHERSTACK_KEY = "insert key here"
+    const API_KEY = "insert key here";
 
     const getWeather = async () => {
+        if (!city) {
+            setError("Please enter a city name.");
+            setWeatherData(null);
+            return;
+        }
         try {
-            const response = await fetch(`http://api.weatherstack.com/current?access_key=${WEATHERSTACK_KEY}&query=${city}`);
+            const response = await fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&key=${API_KEY}`);
             const data = await response.json();
-            if (data.error) {
-                setError(data.error.info);
-                setWeatherData(null);
-            } else {
-                setWeatherData(data);
+            if (data.data && data.data.length > 0) {
                 setError(null);
+                setWeatherData(data.data[0]);
+            } else {
+                setError("City not found.");
+                setWeatherData(null);
             }
         } catch (err) {
             setError("An error occurred while fetching weather data.");
@@ -26,7 +31,11 @@ export default function Main(){
     }
 
     const toggleUnit = () => {
-        return celcius ? (weatherData.current.temperature * 9/5 + 32).toFixed(2) : weatherData.current.temperature;
+        if (!weatherData) {
+            return "";
+        }
+
+        return celcius ? (weatherData.temp * 9/5 + 32).toFixed(2) : weatherData.temp;
     }
 
     return(
@@ -42,9 +51,9 @@ export default function Main(){
                 {error && <p className="error">{error}</p>}
                 {weatherData && (
                     <div className="weather-info">
-                        <h2>{weatherData.location.name}, {weatherData.location.country}</h2>
+                        <h2>{weatherData.city_name}</h2>
                         <p>Temperature: {toggleUnit()}°{celcius ? "F" : "C"}</p>
-                        <p>Condition: {weatherData.current.weather_descriptions[0]}</p>
+                        <p>Condition: {weatherData.weather.description}</p>
                     </div>
                 )}
                 <button className="temp-toggle" onClick={() => setCelsius(!celcius)}>Toggle °C/°F</button>
