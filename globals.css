@@ -1,0 +1,253 @@
+:root {
+  --main_bg:#d5f0ff;
+  --nav_bg:#ffffff;
+  --text_col:#000000;
+  --contact_bg: #ffffff;
+}
+
+body{
+  margin: 0;
+}
+
+.layout{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--main_bg);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* NAVBAR */
+nav {
+  margin: 0 auto;
+  margin-bottom: 20px; 
+  margin-top: 15px;
+  background: var(--nav_bg);
+  padding: 15px ;
+  border-radius: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  width: 90%;
+  
+}
+
+nav a{
+  color: var(--text_col);
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 45px;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: rgb(214, 135, 82);
+}
+
+.logo img{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 35px;
+  height: 38px;
+}
+
+.theme-toggle{
+  margin-left: auto;
+}
+
+
+
+/* WEATHER */
+.search-container{
+  max-width: 500px;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color:  var(--contact_bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-button, .temp-toggle{
+  background-color: #144b69;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px;
+  width: 140px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.search-button:hover, .temp-toggle:hover{
+  background-color: white;
+  color: #144b69;
+}
+
+.weather-info{
+  text-align: center;
+}
+.weather-info p{
+  font-size: 20px;
+}
+.weather-info h2{
+  text-transform: uppercase;
+}
+.weather-info h3{
+  font-size: 25px;
+}
+
+
+/* POSTS/ARTICLES */
+.posts-container{
+  display: grid;
+  width: 95%;
+  max-width: 1200px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+}
+
+.card{
+  display: block;
+  background: var(--contact_bg);
+  padding: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.posts-container img{
+  height: 280px;
+  display: block;
+  margin: 0 auto;
+}
+/* LIST */
+#list-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: "white";
+  padding: "5px";
+  margin-bottom: "2px";
+  border-radius: "12px";
+  cursor: "pointer";
+  float: "right";
+  position: "relative";
+}
+
+#list-container{
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  float: left;
+  align-self: left;
+}
+
+/* CONTACT FORM */
+.text{
+  color: var(--text_col);
+}
+
+.contact-form{
+  max-width: 600px;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color:  var(--contact_bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-row label{
+  font-size: 20px;
+}
+
+.form-row{
+  display: grid;
+  grid-template-columns: 300px ;
+  padding-bottom: 10px;
+}
+
+.submit-button{
+  background-color: #144b69;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px;
+  width: 180px;
+  cursor: pointer;
+}
+
+.submit-button:hover{
+  background-color: white;
+  color: #144b69;
+}
+
+/* FOOTER */
+footer {
+  color: #000000;
+  font-size: 18px;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: var(--nav_bg);
+  margin-top: auto;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+
+/**** MOBILE ****/
+@media (max-width: 768px){
+  nav a{
+    font-size: 18px;
+    margin-right: 9px;
+    justify-content: center;
+  }
+  .logo img{
+    height: 34px;
+    width: 65px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .search-container{
+    max-width: fit-content;
+  }
+
+  .contact-form{
+    max-width: fit-content;
+  }
+
+  .posts-container{
+    grid-template-columns: 1fr;
+  }
+  .posts-container img{
+    max-width: 290px;
+    height: auto;
+  }
+
+
+  footer{
+    font-size: 14px;
+  }
+}
