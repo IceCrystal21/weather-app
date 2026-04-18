@@ -4,10 +4,10 @@ export default function Details() {
   const cities = ["Toronto", "Tokyo", "Berlin"];
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px" }} className="list-container">
     
 
-      {cities.map((city) => (
+    {cities.map((city) => (
         <List key={city} city={city} />
       ))}
     </div>
