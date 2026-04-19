@@ -140,6 +140,14 @@ nav a:hover{
   margin: 0 auto;
 }
 /* LIST */
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
 .list-card {
   width: 100%;
 }
