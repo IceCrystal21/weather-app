@@ -3,6 +3,7 @@
   --nav_bg:#ffffff;
   --text_col:#000000;
   --contact_bg: #ffffff;
+  --detail_hover: #d1d1d1;
 }
 
 body{
@@ -148,8 +149,8 @@ nav a:hover{
   min-height: 250px; 
   padding: 20px;
   border-radius: 18px;
-  background: #3d3d3d;
-  color: white;
+  background: var(--contact_bg);
+  color: var(--text_col);
   box-sizing: border-box;
 }
 

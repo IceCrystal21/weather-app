@@ -101,7 +101,7 @@ function List({ city = "Toronto" }) {
               className="list-item"
               style={{
                 display: isVisible ? "block" : "none",
-                backgroundColor: isHovered ? "#939393" : "#3d3d3d",
+                backgroundColor: isHovered ? "var(--detail_hover)" : "var(--contact_bg)",
               }}
             >
               <h2>{city}</h2>

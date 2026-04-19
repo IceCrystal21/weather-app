@@ -48,7 +48,7 @@ export default function Main(){
                     onChange = {(e) => setCity(e.target.value)}
                 />
                 <button className="search-button" onClick = {getWeather}>Search</button>
-                {error && <p className="error">{error}</p>}
+                {error && <p className="error text">{error}</p>}
                 {weatherData && (
                     <div className="weather-info">
                         <h2 className="text">{weatherData.city_name}</h2>

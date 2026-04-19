@@ -22,11 +22,13 @@ export default function ThemeSwitcher() {
                     css_var.style.setProperty("--nav_bg", "#ffffff")
                     css_var.style.setProperty("--text_col", "#000000")
                     css_var.style.setProperty("--contact_bg", "#ffffff")
+                    css_var.style.setProperty("--detail_hover", "#d7d7d7")
                 } else {
                     css_var.style.setProperty("--main_bg", "#1b1b1b")
                     css_var.style.setProperty("--nav_bg", "#6f6f6f")
                     css_var.style.setProperty("--text_col", "#ffffff")
                     css_var.style.setProperty("--contact_bg", "#414141")
+                    css_var.style.setProperty("--detail_hover", "#717171")
                 }}, [theme] ) 
     return(
         <Image alt="" src={theme=="Light" ? sun : moon} width="40" height="40" onClick={() => {
