@@ -6,6 +6,7 @@ export default function Main(){
     const [celcius, setCelsius] = useState(true);
     const [error, setError] = useState(null);
     
+    const API_KEY = "insert key here";
     
     const getWeather = async () => {
         if (!city) {
