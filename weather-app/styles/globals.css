@@ -25,6 +25,8 @@ main{
   margin-bottom: 20px;
 }
 
+
+
 /* NAVBAR */
 nav {
   margin: 0 auto;
@@ -63,6 +65,7 @@ nav a:hover{
 .theme-toggle{
   margin-left: auto;
 }
+
 
 
 
@@ -108,6 +111,8 @@ nav a:hover{
 }
 
 
+
+
 /* POSTS/ARTICLES */
 .posts-container{
   display: grid;
@@ -139,6 +144,11 @@ nav a:hover{
   display: block;
   margin: 0 auto;
 }
+
+
+
+
+
 /* LIST */
 .list-container {
   display: grid;
@@ -156,11 +166,17 @@ nav a:hover{
   width: 100%;
   min-height: 250px; 
   padding: 20px;
-  border-radius: 18px;
+  border-radius: 15px;
   background: var(--contact_bg);
   color: var(--text_col);
   box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+
 
 /* CONTACT FORM */
 .text{
@@ -203,6 +219,10 @@ nav a:hover{
   color: #144b69;
 }
 
+
+
+
+
 /* FOOTER */
 footer {
   color: #000000;
@@ -217,6 +237,11 @@ footer {
 footer p {
   margin: 5px 0;
 }
+
+
+
+
+
 
 
 /**** MOBILE ****/
@@ -247,7 +272,6 @@ footer p {
     max-width: 290px;
     height: auto;
   }
-
 
   footer{
     font-size: 14px;
