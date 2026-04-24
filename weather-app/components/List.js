@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 
 function List({ city = "Toronto" }) {
   const [items] = useState([
-    { id: 1, name: "Morning", description: "Good morning weather" },
-    { id: 2, name: "Afternoon", description: "Afternoon forecast" },
-    { id: 3, name: "Evening", description: "Evening weather" },
+    { id: 1},
+    { id: 2},
+    { id: 3},
   ]);
 
-  const API_KEY = "0b28609f10904e18aca4dc76c5d67bb7";
+  const API_KEY = "912fd4dfa49e4c90a91c33738874addc";
 
   const [hoverId, setHoverId] = useState(null);
   const [activeId, setActiveId] = useState(null);
@@ -100,8 +100,7 @@ function List({ city = "Toronto" }) {
               onMouseLeave={() => setHoverId(null)}
               className="list-item"
               style={{
-                display: isVisible ? "block" : "none",
-                backgroundColor: isHovered ? "var(--detail_hover)" : "var(--contact_bg)",
+                display: isVisible ? "block" : "none"
               }}
             >
               <h2>{city}</h2>
